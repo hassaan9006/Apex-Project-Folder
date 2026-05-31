@@ -1,0 +1,72 @@
+<!-- ============================================================ -->
+<!-- FILE 1: trainers.html — save in templates/ folder           -->
+<!-- ============================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex — Our Trainers</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Apex</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/trainers">Trainers</a></li>
+            <li><a href="/transformation">Transformation</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/bmi">BMI Calc</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/register" class="btn" style="padding: 8px 20px; font-size: 13px;">Join Now</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="page-banner">
+        <h1>Our Trainers</h1>
+        <p>Meet the experts who will guide your fitness journey</p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-3">
+
+                <div class="trainer-card">
+                    <img src="https://placehold.co/120x120/1a1a2e/ff6b35?text=Trainer1" alt="Trainer1">
+                    <h3>Trainer 1 </h3>
+                    <p>Head of Strength & Conditioning</p>
+                    <p style="color: #888; font-size: 13px; margin-top: 10px; line-height: 1.6;"> Specializes in powerlifting, muscle building, and sports performance training.</p>
+                </div>
+
+                <div class="trainer-card">
+                    <img src="https://placehold.co/120x120/1a1a2e/ff6b35?text=Trainer2" alt="Trainer2">
+                    <h3>Trainer 2</h3>
+                    <p>Yoga & Flexibility Coach</p>
+                    <p style="color: #888; font-size: 13px; margin-top: 10px; line-height: 1.6;">Certified yoga instructor.</p>
+                </div>
+
+                <div class="trainer-card">
+                    <img src="https://placehold.co/120x120/1a1a2e/ff6b35?text=Trainer3" alt="Trainer3">
+                    <h3>Trainer 3</h3>
+                    <p>Cardio & HIIT Specialist</p>
+                    <p style="color: #888; font-size: 13px; margin-top: 10px; line-height: 1.6;"> Specializes in endurance training, fat loss, and high-performance cardio.</p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <span>Apex Gym</span>. All rights reserved. | UET Lahore — BS Applied Computing Project</p>
+    </footer>
+
+</body>
+</html>

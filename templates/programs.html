@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex — Programs</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="/" class="logo">Apex</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/trainers">Trainers</a></li>
+            <li><a href="/transformation">Transformation</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/bmi">BMI Calc</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/register" class="btn" style="padding: 8px 20px; font-size: 13px;">Join Now</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+        <h1>Programs & Classes</h1>
+        <p>Find the program that matches your goal</p>
+    </div>
+
+    <!-- PROGRAMS GRID -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">All Programs</h2>
+            <p class="section-sub">We offer 3 specialized programs for every fitness level</p>
+
+            <div class="grid-3">
+
+                <div class="card" style="border-left: 5px solid var(--accent);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                        <span style="font-size: 40px;">🏃</span>
+                        <span style="background: #fff3ee; color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">45 min</span>
+                    </div>
+                    <h3>Cardio Blast</h3>
+                    <p>High-intensity cardio training to burn calories, improve stamina, and boost heart health. Suitable for all fitness levels.</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-top: 14px;">Mon / Wed / Fri — 7:00 AM</p>
+                </div>
+
+                <div class="card" style="border-left: 5px solid var(--accent);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                        <span style="font-size: 40px;"></span>
+                        <span style="background: #fff3ee; color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">60 min</span>
+                    </div>
+                    <h3>Strength Training</h3>
+                    <p>Structured resistance training to build lean muscle, increase strength, and improve overall body composition.</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-top: 14px;">Tue / Thu / Sat — 6:00 AM</p>
+                </div>
+
+                <div class="card" style="border-left: 5px solid var(--accent);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                        <span style="font-size: 40px;"></span>
+                        <span style="background: #fff3ee; color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">50 min</span>
+                    </div>
+                    <h3>Yoga & Flexibility</h3>
+                    <p>Guided yoga sessions to improve flexibility, reduce stress, and enhance body-mind connection. Perfect for recovery days.</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-top: 14px;">Mon / Wed / Sun — 8:00 AM</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 <span>Apex Gym</span>. All rights reserved. | UET Lahore — BS Applied Computing Project</p>
+    </footer>
+
+</body>
+</html>

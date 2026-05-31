@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Gym — Home</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="/" class="logo">Apex</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/trainers">Trainers</a></li>
+            <li><a href="/transformation">Transformation</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/bmi">BMI Calc</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/register" class="btn" style="padding: 8px 20px; font-size: 13px;">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section style="background: var(--navy); padding: 110px 48px; display: flex; align-items: center; justify-content: space-between; gap: 40px;">
+        <div style="max-width: 580px;">
+            <p style="color: var(--accent); font-size: 14px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">Welcome to Apex</p>
+            <h1 style="font-family: 'Oswald', sans-serif; font-size: 64px; font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 20px;">
+               "Build Your Best Self"
+            </h1>
+            <p style="color: #aaaaaa; font-size: 17px; line-height: 1.7; margin-bottom: 36px;">
+                Welcome to Apex Gym, your local gym in Lahore dedicated to helping you achieve your fitness goals. 
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <a href="/register" class="btn">Join Now</a>
+                <a href="/programs" class="btn-outline">View Programs</a>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://placehold.co/420x340/1a1a2e/ff6b35?text=Apex+Gym" alt="Gym" style="border-radius: 16px; max-width: 100%;">
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section class="section" style="background: var(--light);">
+        <div class="container">
+            <h2 class="section-title">Our Programs</h2>
+            <p class="section-sub">Whatever your goal, we have a program built for it</p>
+            <div class="grid-3">
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <div style="font-size: 40px; margin-bottom: 16px;">🏃</div>
+                    <h3>Cardio Training</h3>
+                    <p>Burn fat and build endurance with our high-intensity cardio programs designed for all fitness levels.</p>
+                    <a href="/programs" style="color: var(--accent); font-weight: 600; font-size: 14px; text-decoration: none; display: inline-block; margin-top: 16px;">Learn More →</a>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <div style="font-size: 40px; margin-bottom: 16px;">💪</div>
+                    <h3>Strength Training</h3>
+                    <p>Build lean muscle and increase power with our structured strength and resistance training plans.</p>
+                    <a href="/programs" style="color: var(--accent); font-weight: 600; font-size: 14px; text-decoration: none; display: inline-block; margin-top: 16px;">Learn More →</a>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <div style="font-size: 40px; margin-bottom: 16px;">🧘</div>
+                    <h3>Yoga & Flexibility</h3>
+                    <p>Improve flexibility, reduce stress, and restore balance with our guided yoga and mobility classes.</p>
+                    <a href="/programs" style="color: var(--accent); font-weight: 600; font-size: 14px; text-decoration: none; display: inline-block; margin-top: 16px;">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section style="background: var(--accent); padding: 72px 20px; text-align: center;">
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: 40px; color: var(--white); margin-bottom: 16px;">Ready to Start Your Journey?</h2>
+        <p style="color: #ffe0d4; font-size: 17px; margin-bottom: 32px;">Join Apex today and take the first step towards a healthier you.</p>
+        <a href="/register" class="btn-outline">Get Started Today</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 <span>Apex Gym</span>. All rights reserved. | UET Lahore — BS Applied Computing Project</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex — BMI Calculator</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Apex</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/trainers">Trainers</a></li>
+            <li><a href="/transformation">Transformation</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/bmi">BMI Calc</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/register" class="btn" style="padding: 8px 20px; font-size: 13px;">Join Now</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="page-banner">
+        <h1>BMI Calculator</h1>
+        <p>Find out your Body Mass Index instantly</p>
+    </div>
+
+    <section class="section" style="background:var(--light);">
+        <div class="form-wrapper">
+            <h2 style="font-family:'Oswald',sans-serif;font-size:26px;color:var(--navy);margin-bottom:8px;">Calculate Your BMI</h2>
+            <p style="color:var(--gray);font-size:14px;margin-bottom:28px;">Enter your weight and height to calculate your Body Mass Index.</p>
+
+            <!-- THIS FORM POSTS TO /bmi — Flask catches it, Python calculates, result shows below -->
+            <form action="/bmi" method="POST">
+                <div class="form-group">
+                    <label>Weight (kilograms)</label>
+                    <input type="number" name="weight" placeholder="e.g. 70" step="0.1" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Height (centimeters)</label>
+                    <input type="number" name="height" placeholder="e.g. 175" min="1" required>
+                </div>
+                <button type="submit" class="btn" style="width:100%;margin-top:8px;">Calculate BMI</button>
+            </form>
+
+            <!-- THIS BLOCK ONLY SHOWS IF FLASK SENDS A RESULT BACK -->
+            <!-- {{ result }} and {{ category }} are Python variables passed by Flask -->
+            {% if result %}
+            <div class="bmi-result">
+                <p style="color:#aaa;font-size:14px;margin-bottom:8px;">Your BMI Score</p>
+                <h2>{{ result }}</h2>
+                <p>Category: <strong>{{ category }}</strong></p>
+
+                {% if category == "Underweight" %}
+                <p style="color:#aaa;font-size:13px;margin-top:12px;">Consider increasing caloric intake and building muscle with our Strength Training program.</p>
+                {% elif category == "Normal Weight" %}
+                <p style="color:#aaa;font-size:13px;margin-top:12px;">Great work! Maintain your healthy weight with regular training and balanced nutrition.</p>
+                {% elif category == "Overweight" %}
+                <p style="color:#aaa;font-size:13px;margin-top:12px;">Our Cardio Blast and HIIT programs combined with a healthy diet can help you reach your goal.</p>
+                {% else %}
+                <p style="color:#aaa;font-size:13px;margin-top:12px;">We recommend speaking with our trainers and nutrition coach to build a safe, effective plan.</p>
+                {% endif %}
+
+                <a href="/programs" class="btn" style="margin-top:20px;display:inline-block;">View Programs</a>
+            </div>
+            {% endif %}
+
+        </div>
+
+        <!-- BMI Chart -->
+        <div class="container" style="max-width:540px;margin-top:48px;">
+            <h3 style="font-family:'Oswald',sans-serif;font-size:22px;color:var(--navy);text-align:center;margin-bottom:20px;">BMI Reference Chart</h3>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+                <tr style="background:var(--navy);color:white;">
+                    <th style="padding:12px;text-align:left;">BMI Range</th>
+                    <th style="padding:12px;text-align:left;">Category</th>
+                </tr>
+                <tr style="background:white;">
+                    <td style="padding:12px;border-bottom:1px solid #eee;">Below 18.5</td>
+                    <td style="padding:12px;border-bottom:1px solid #eee;color:#2e6da4;">Underweight</td>
+                </tr>
+                <tr style="background:var(--light);">
+                    <td style="padding:12px;border-bottom:1px solid #eee;">18.5 — 24.9</td>
+                    <td style="padding:12px;border-bottom:1px solid #eee;color:green;">Normal Weight</td>
+                </tr>
+                <tr style="background:white;">
+                    <td style="padding:12px;border-bottom:1px solid #eee;">25.0 — 29.9</td>
+                    <td style="padding:12px;border-bottom:1px solid #eee;color:orange;">Overweight</td>
+                </tr>
+                <tr style="background:var(--light);">
+                    <td style="padding:12px;">30.0 and above</td>
+                    <td style="padding:12px;color:red;">Obese</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <span>Apex Gym</span>. All rights reserved. | UET Lahore — BS Applied Computing Project</p>
+    </footer>
+</body>
+</html>

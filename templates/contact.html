@@ -1,0 +1,84 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex — Contact</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Apex</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/trainers">Trainers</a></li>
+            <li><a href="/transformation">Transformation</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/bmi">BMI Calc</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/register" class="btn" style="padding: 8px 20px; font-size: 13px;">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-banner">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you</p>
+    </div>
+    <section class="section" style="background:var(--light);">
+        <div class="container">
+            <div class="grid-2" style="align-items:start;gap:48px;">
+                <div class="form-wrapper" style="margin:0;">
+                    <h2 style="font-family:'Oswald',sans-serif;font-size:26px;color:var(--navy);margin-bottom:8px;">Send Us a Message</h2>
+                    <p style="color:var(--gray);font-size:14px;margin-bottom:28px;">Have a question or feedback? Fill in the form and we will get back to you.</p>
+                    <form action="/contact" method="POST">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" name="subject" placeholder="What is this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width:100%;">Send Message</button>
+                    </form>
+                </div>
+                <div>
+                    <h2 style="font-family:'Oswald',sans-serif;font-size:28px;color:var(--navy);margin-bottom:24px;">Get In Touch</h2>
+                    <div style="margin-bottom:24px;">
+                        <p style="font-weight:600;color:var(--navy);margin-bottom:6px;">📍 Address</p>
+                        <p style="color:#555;font-size:15px;">123 Fitness Street, <br>Lahore, Punjab, Pakistan</p>
+                    </div>
+                    <div style="margin-bottom:24px;">
+                        <p style="font-weight:600;color:var(--navy);margin-bottom:6px;">📞 Phone</p>
+                        <p style="color:#555;font-size:15px;">+92 300 0000000</p>
+                    </div>
+                    <div style="margin-bottom:24px;">
+                        <p style="font-weight:600;color:var(--navy);margin-bottom:6px;">✉️ Email</p>
+                        <p style="color:#555;font-size:15px;">info@Apexgym.pk</p>
+                    </div>
+                    <div>
+                        <p style="font-weight:600;color:var(--navy);margin-bottom:6px;">🕐 Opening Hours</p>
+                        <p style="color:#555;font-size:15px;">Mon – Fri: 5:00 AM – 11:00 PM<br>Saturday: 6:00 AM – 10:00 PM<br>Sunday: Off</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 <span>Apex Gym</span>. All rights reserved. | UET Lahore — BS Applied Computing Project</p>
+    </footer>
+</body>
+</html>

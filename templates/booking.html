@@ -1,0 +1,75 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex — Book a Class</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Apex</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/trainers">Trainers</a></li>
+            <li><a href="/transformation">Transformation</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/bmi">BMI Calc</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/register" class="btn" style="padding: 8px 20px; font-size: 13px;">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-banner">
+        <h1>Book a Class</h1>
+        <p>Reserve your spot in any of our classes</p>
+    </div>
+    <section class="section" style="background:var(--light);">
+        <div class="form-wrapper">
+            <h2 style="font-family:'Oswald',sans-serif;font-size:26px;color:var(--navy);margin-bottom:8px;">Class Booking</h2>
+            <p style="color:var(--gray);font-size:14px;margin-bottom:28px;">Fill in your details and select a class to book your spot.</p>
+            <form action="/booking" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Select Class</label>
+                    <select name="class_type">
+                        <option value="Cardio Blast">Cardio Blast</option>
+                        <option value="Strength Training">Strength Training</option>
+                        <option value="Yoga & Flexibility">Yoga & Flexibility</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date</label>
+                    <input type="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Time</label>
+                    <select name="time">
+                        <option value="6:00 AM">6:00 AM</option>
+                        <option value="7:00 AM">7:00 AM</option>
+                        <option value="8:00 AM">8:00 AM</option>
+                        <option value="5:30 PM">5:30 PM</option>
+                        <option value="6:00 PM">6:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width:100%;margin-top:8px;">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 <span>Apex Gym</span>. All rights reserved. | UET Lahore — BS Applied Computing Project</p>
+    </footer>
+</body>
+</html>

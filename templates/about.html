@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex — About Us</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="/" class="logo">Apex</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/trainers">Trainers</a></li>
+            <li><a href="/transformation">Transformation</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/bmi">BMI Calc</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/register" class="btn" style="padding: 8px 20px; font-size: 13px;">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner">
+        <h1>About Us</h1>
+        <p>Our story, our mission, our values</p>
+    </div>
+
+   <!-- OUR STORY -->
+   <section class="section">
+       <div class="container">
+           <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+
+               <p style="color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">
+                   Our Story
+               </p>
+
+               <h2 style="font-family: 'Oswald', sans-serif; font-size: 36px; color: var(--navy); margin-bottom: 20px;">
+                   Built by Fitness Lovers, For Fitness Lovers
+               </h2>
+
+               <p style="color: #555; font-size: 15px; line-height: 1.8;">
+                   Apex was started to give people a proper place to train. Good equipment, good trainers, real results.
+               </p>
+
+           </div>
+       </div>
+   </section>
+
+    <!--    VALUES -->
+    <section class="section" style="background: var(--light);">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-sub">The principles we live by every day</p>
+            <div class="grid-3">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 16px;">🔥</div>
+                    <h3>Discipline</h3>
+                    <p>We believe consistency and discipline are the foundation of any transformation. Show up, put in the work, every single day.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 16px;">🤝</div>
+                    <h3>Community</h3>
+                    <p>Fitness is better together. Our members support and inspire each other, creating an environment where everyone thrives.</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 16px;">🎯</div>
+                    <h3>Results</h3>
+                    <p>Everything we do is designed to get you real, measurable results. Your goals become our goals from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 <span>Apex Gym</span>. All rights reserved. | UET Lahore — BS Applied Computing Project</p>
+    </footer>
+
+</body>
+</html>
