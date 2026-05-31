@@ -35,7 +35,7 @@
             <h2 style="font-family:'Oswald',sans-serif;font-size:26px;color:var(--navy);margin-bottom:8px;">Calculate Your BMI</h2>
             <p style="color:var(--gray);font-size:14px;margin-bottom:28px;">Enter your weight and height to calculate your Body Mass Index.</p>
 
-            # THIS FORM POSTS TO /bmi — Flask catches it, Python calculates, result shows below
+            <!-- THIS FORM POSTS TO /bmi — Flask catches it, Python calculates, result shows below -->
             <form action="/bmi" method="POST">
                 <div class="form-group">
                     <label>Weight (kilograms)</label>
@@ -48,8 +48,8 @@
                 <button type="submit" class="btn" style="width:100%;margin-top:8px;">Calculate BMI</button>
             </form>
 
-            # THIS BLOCK ONLY SHOWS IF FLASK SENDS A RESULT BACK 
-            # {{ result }} and {{ category }} are Python variables passed by Flask
+            <!-- THIS BLOCK ONLY SHOWS IF FLASK SENDS A RESULT BACK -->
+            <!-- {{ result }} and {{ category }} are Python variables passed by Flask -->
             {% if result %}
             <div class="bmi-result">
                 <p style="color:#aaa;font-size:14px;margin-bottom:8px;">Your BMI Score</p>
@@ -72,7 +72,7 @@
 
         </div>
 
-        # BMI Chart
+        <!-- BMI Chart -->
         <div class="container" style="max-width:540px;margin-top:48px;">
             <h3 style="font-family:'Oswald',sans-serif;font-size:22px;color:var(--navy);text-align:center;margin-bottom:20px;">BMI Reference Chart</h3>
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
