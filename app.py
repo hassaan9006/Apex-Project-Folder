@@ -124,18 +124,6 @@ def transformation():
     return render_template('transformation.html')
 
 
-@app.route('/newsletter', methods=['GET', 'POST'])
-def newsletter():
-    if request.method == 'POST':
-        name  = request.form['name']
-        email = request.form['email']
-        with open('data/newsletter.csv', 'a', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow([name, email, datetime.now()])
-        return redirect(url_for('thankyou'))
-    return render_template('newsletter.html')
-
-
 # ─────────────────────────────────────────
 # SHARED
 # ─────────────────────────────────────────
